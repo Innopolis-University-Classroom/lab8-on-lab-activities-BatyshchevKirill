@@ -13,9 +13,6 @@ class Calculator {
     private double left;
     private double right;
 
-    /// ❌ ❌ ❌ ❌
-    /// this function violates the OP principle
-    /// because it depend on concrete classes enum
     public  double calculate(String operation) {
         double result;
         switch (operation) {
