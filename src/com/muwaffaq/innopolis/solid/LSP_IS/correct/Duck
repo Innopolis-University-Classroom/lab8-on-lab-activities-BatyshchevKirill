@@ -16,7 +16,7 @@ public class Duck extends Bird implements Flyable, Swimmable{
         System.out.println("laying eggs");
     }
 
-
+    @Override
     public void swim() {
         System.out.println("swimming");
     }
