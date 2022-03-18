@@ -9,35 +9,46 @@ package com.muwaffaq.innopolis.solid.OCP_DI.wrong;
 // DI : high = Abstract class
 // low : classes
 //
-class Calculator {
+interface Calculator {
     private double left;
     private double right;
 
-    public  double calculate(String operation) {
-        double result;
-        switch (operation) {
-            case "ADD":
-                result = left + right;
-                break;
-            case "SUBTRACT":
-                result = left - right;
-                break;
-            case "DIVIDE":
-                result = left / right;
-                break;
-            case "MULTIPLY":
-                result = left * right;
-                break;
-            default: System.out.println("the operation is not specified yet")
-        }
-        return result;
+   double do(double left, double right){}
+
+public static void main(String[] args) {
+   Calculator calculator = new ADD();
+    calculator.calculate();
+    calculator.calculate();
+}
+class ADD implements Calculator{
+    private double left;
+    private double right;
+    @Override
+    double do(double left, double right){
+        return left+right;
     }
-
-    public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        calculator.calculate("ADD");
-        calculator.calculate("ADD");
-
+}
+class SUBTRACT implements Calculator{
+    private double left;
+    private double right;
+    @Override
+    double do(double left, double right){
+        return left-right;
     }
-
+}
+class MULTIPLY implements Calculator{
+    private double left;
+    private double right;
+    @Override
+    double do(double left, double right){
+        return left*right;
+    }
+}
+class DIVIDE implements Calculator{
+    private double left;
+    private double right;
+    @Override
+    double do(double left, double right){
+        return left/right;
+    }
 }
