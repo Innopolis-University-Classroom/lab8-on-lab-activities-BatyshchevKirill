@@ -1,6 +1,6 @@
 package com.muwaffaq.innopolis.solid.LSP_IS.correct;
 
-public class Duck extends Bird implements Flyable{
+public class Duck extends Bird implements Flyable, Swimmable{
     @Override
     public void fly() {
         System.out.println("Flying...");
