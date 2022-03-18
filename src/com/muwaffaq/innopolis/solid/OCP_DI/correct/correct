@@ -34,9 +34,9 @@ class Calculator {
     }
 
     public static void main(String[] args) {
-        CalculatorWrong calculator = new CalculatorWrong();
-        calculator.calculate(Operation.ADD);
-        calculator.calculate(Operation.ADD);
+        Calculator calculator = new Calculator();
+        calculator.calculate("ADD");
+        calculator.calculate("ADD");
 
     }
 
