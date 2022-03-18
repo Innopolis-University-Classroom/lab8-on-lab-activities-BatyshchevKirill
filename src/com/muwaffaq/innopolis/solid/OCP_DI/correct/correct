@@ -17,8 +17,8 @@ interface Calculator {
 
 public static void main(String[] args) {
    Calculator calculator = new ADD();
-    calculator.calculate();
-    calculator.calculate();
+    calculator.do();
+    calculator.do();
 }
 class ADD implements Calculator{
     private double left;
