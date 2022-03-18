@@ -15,9 +15,7 @@ import java.util.List;
 public class Cart {
 
     List<Product> products;
-    double totals;
-    String token;
-
+    
     void addToCart(Product product) {
         products.add(product);
     }
@@ -25,12 +23,13 @@ public class Cart {
     void removeFromCart(Product product) {
         products.remove(product);
     }
-
+}
+class Totals{
+    double totals;
+    String token;
     void applyDiscount(int percentage) {
         totals = totals * percentage;
     }
-
-
 }
 
 
